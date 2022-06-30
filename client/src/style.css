@@ -1,0 +1,13 @@
+#brd {
+  position: absolute;
+  padding: 2.5% 3% 2.5% 3%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+}

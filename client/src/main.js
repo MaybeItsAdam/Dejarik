@@ -1,31 +1,49 @@
-// A is the outer rim - 12 points starts top right
-// B is the inner rim - 12 points
+// A is the outer rim - 12 points > starts top right and
+// B is the inner rim - 12 points > continues clockwise
 // C is the core - 1 point
 
+document.addEventListener('DOMContentLoaded',domloaded,false);
+function domloaded(){
 
-window.onload = function () {
   var canvas = document.getElementById("pcs")
   var pcs_context = canvas.getContext("2d");
 
-  const a = [];
-  const b = [];
-  const c = (305, 305);
+  const radA = 235;
+  const radB = 140;
+  var a = [];
+  var b = [];
+  const core = [305, 305];
+  
+  // i have no idea but for some reason the value of 6.27 gives
+  // a 360 degree loop so i had to define 1 degree here
+  const deg = 6.27/360
 
-  for (c=1) {
-    a[c] = null;
-    b[c] = null;
+  for (c=1; c<=12; c++) {
+    var angle = -deg*c*30 - (deg*-195)
+
+    var a_x = 305 + (radA * Math.sin(angle));
+    var a_y = 305 + (radA * Math.cos(angle));
+    var b_x = 305 + (radB * Math.sin(angle));
+    var b_y = 305 + (radB * Math.cos(angle));
+
+    a[c] = {x: a_x, y: a_y};
+    b[c] = {x: b_x, y: b_y};
+
+    // pcs_context.fillRect(a[1].x, a[1].y, 3,3);
+    // pcs_context.fillRect(b[1].x, b[1].y, 3,3);
   }
+
 
   var r_players = [];
   var b_players = [];
 
   // load red players
-  for (r=0; r<4; r++) {
-    r_players[r] = {}
+  for (r_i=0; r_i<4; r_i++) {
+    r_players[r_i] = {}
   }
 
   // load blue players
-  for (b=0; b<4; r++) {
+  for (b_i=0; b_i<4; b_i++) {
     b_players[b] = {}
   }
 }

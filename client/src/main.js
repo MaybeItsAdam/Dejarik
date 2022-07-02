@@ -13,10 +13,10 @@ function domloaded(){
   var a = [];
   var b = [];
   const core = [305, 305];
-  
+
   // i have no idea but for some reason the value of 6.27 gives
   // a 360 degree loop so i had to define 1 degree here
-  const deg = 6.27/360
+  const deg = Math.PI/180
 
   for (c=1; c<=12; c++) {
     var angle = -deg*c*30 - (deg*-195)
@@ -29,10 +29,10 @@ function domloaded(){
     a[c] = {x: a_x, y: a_y};
     b[c] = {x: b_x, y: b_y};
 
-    // pcs_context.fillRect(a[1].x, a[1].y, 3,3);
-    // pcs_context.fillRect(b[1].x, b[1].y, 3,3);
   }
-
+  // 
+  // pcs_context.fillRect(a[1].x, a[1].y, 3,3);
+  // pcs_context.fillRect(b[3].x, b[3].y, 3,3);
 
   var r_players = [];
   var b_players = [];

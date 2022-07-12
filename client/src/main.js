@@ -14,8 +14,6 @@ function domloaded(){
   var b = [];
   const core = [305, 305];
 
-  // i have no idea but for some reason the value of 6.27 gives
-  // a 360 degree loop so i had to define 1 degree here
   const deg = Math.PI/180
 
   for (c=1; c<=12; c++) {
@@ -30,7 +28,7 @@ function domloaded(){
     b[c] = {x: b_x, y: b_y};
 
   }
-  // 
+  //
   // pcs_context.fillRect(a[1].x, a[1].y, 3,3);
   // pcs_context.fillRect(b[3].x, b[3].y, 3,3);
 

@@ -2,7 +2,7 @@
 // B is the inner rim - 12 points > continues clockwise
 // C is the core - 1 point
 
-document.addEventListener('DOMContentLoaded',domloaded,false);
+document.addEventListener('DOMContentLoaded', downloaded, false);
 function domloaded(){
 
   var canvas = document.getElementById("pcs")
